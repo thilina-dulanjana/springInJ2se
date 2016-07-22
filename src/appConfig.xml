@@ -6,11 +6,17 @@
 ">
     <bean id="student" class="terminal.StudentTerminal"></bean>    
     
-    <bean id="factory" class="edu.ijse.absd.springseapp.connection.factory.DatabaseResourceFactory"></bean>
+    <bean id="connection" class="edu.ijse.absd.springseapp.connection.database.impl.MySQLDatabaseResourceConnectionImpl" scope="singleton"></bean>
+    
+    <bean id="factory" class="edu.ijse.absd.springseapp.connection.factory.DatabaseResourceFactory" scope="singleton" autowire="byType">
+        
+    </bean>
     
     <bean id="studentDAOImpl" class="edu.ijse.absd.springseapp.dao.impl.StudentDAOImpl" autowire="byType"></bean>
     
-    <bean id="studentService" class="edu.ijse.absd.springseapp.service.impl.StudentServiceImpl" autowire="byType">          
-    </bean>
+    <bean id="parentDAOImpl" class="edu.ijse.absd.springseapp.dao.impl.ParentDAOImpl" autowire="byType"></bean>
     
+    <bean id="studentService" class="edu.ijse.absd.springseapp.service.impl.StudentServiceImpl" autowire="byType">          
+    </bean> 
+       
 </beans>

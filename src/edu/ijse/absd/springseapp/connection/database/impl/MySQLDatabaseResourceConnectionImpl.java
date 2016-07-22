@@ -17,9 +17,9 @@ public class MySQLDatabaseResourceConnectionImpl implements DatabaseResourceConn
 
     public Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-//        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","root");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","root");
+//        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","");
         return connection;
-    }    
+    }   
 
 }

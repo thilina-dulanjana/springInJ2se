@@ -7,10 +7,19 @@
 package edu.ijse.absd.springseapp.connection.factory;
 
 import edu.ijse.absd.springseapp.connection.database.DatabaseResourceConnection;
-import edu.ijse.absd.springseapp.connection.database.impl.MySQLDatabaseResourceConnectionImpl;
 
 public class DatabaseResourceFactory {
+    private DatabaseResourceConnection connection;    
+
+    public DatabaseResourceConnection getConnection() {
+        return connection;
+    }
+
+    public void setConnection(DatabaseResourceConnection connection) {
+        this.connection = connection;
+    }    
+    
     public DatabaseResourceConnection getResourceConnection(){
-        return new MySQLDatabaseResourceConnectionImpl();
+        return getConnection();
     }    
 }

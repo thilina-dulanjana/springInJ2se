@@ -13,5 +13,5 @@ import java.sql.SQLException;
  * @author thilina
  */
 public interface ParentDAO {
-    public int saveParent(Connection connection, String name, String tp, int memberId) throws SQLException;
+    public int saveParent(String name, String tp, int studentId) throws SQLException, ClassNotFoundException;
 }

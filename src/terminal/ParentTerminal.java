@@ -10,22 +10,5 @@ package terminal;
  * @author thilina
  */
 public class ParentTerminal {
-    private String parentName;
-    private String tp;
-
-    public String getParentName() {
-        return parentName;
-    }
-
-    public void setParentName(String parentName) {
-        this.parentName = parentName;
-    }
-
-    public String getTp() {
-        return tp;
-    }
-
-    public void setTp(String tp) {
-        this.tp = tp;
-    }
+    
 }

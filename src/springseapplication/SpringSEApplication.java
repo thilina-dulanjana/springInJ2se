@@ -5,7 +5,6 @@
 package springseapplication;
 
 import edu.ijse.absd.springseapp.service.StudentService;
-import edu.ijse.absd.springseapp.service.impl.StudentServiceImpl;
 import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -46,6 +45,14 @@ public class SpringSEApplication {
                         System.out.println("Enter Address : ");
                         String address = scanner.next();
                         student.setAddress(address);
+                        
+                        System.out.println("Enter Parent name : ");
+                        String parent = scanner.next();
+                        student.setParentName(parent);
+                        
+                        System.out.println("Enter Telephone : ");
+                        String telephone = scanner.next();
+                        student.setTp(telephone);
                         
                         int i = studentService.saveStudent(student);
                         if(1==i){

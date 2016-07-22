@@ -11,6 +11,24 @@ package terminal;
 public class StudentTerminal {
     private String name;
     private String address;
+    private String parentName;
+    private String tp;
+
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
+    }
+
+    public String getTp() {
+        return tp;
+    }
+
+    public void setTp(String tp) {
+        this.tp = tp;
+    }
 
     public String getName() {
         return name;
